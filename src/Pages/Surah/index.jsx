@@ -78,7 +78,12 @@ const Surah = () => {
     };
     fetchSurah();
 
-    return () => { audioRef.current.pause(); };
+    const audio = audioRef.current;
+    return () => { 
+      if (audio) {
+        audio.pause(); 
+      }
+    };
   }, [id]);
 
   const togglePlay = (ayah) => {

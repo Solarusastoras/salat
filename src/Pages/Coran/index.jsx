@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Search, Book } from 'lucide-react';
+import { Search } from 'lucide-react';
 import './coran.scss';
 
 // Noms français des sourates
