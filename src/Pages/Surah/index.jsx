@@ -79,6 +79,9 @@ const Surah = () => {
     fetchSurah();
 
     const audio = audioRef.current;
+    audio.onerror = () => {
+      console.error('Audio load error', audio.src, audio.error);
+    };
     return () => { 
       if (audio) {
         audio.pause(); 
