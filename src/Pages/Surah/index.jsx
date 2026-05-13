@@ -68,7 +68,7 @@ const Surah = () => {
           numberOfAyahs: arabic.numberOfAyahs,
           ayahs: mergedAyahs,
           // Audio sourate complète local
-          localAudio: `/sound/${String(id).padStart(3, '0')}.mp3`,
+          localAudio: `${process.env.PUBLIC_URL}/sound/${String(id).padStart(3, '0')}.mp3`,
         });
         setLoading(false);
       } catch (error) {
