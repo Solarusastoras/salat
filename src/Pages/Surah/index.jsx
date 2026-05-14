@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, Play, Pause } from 'lucide-react';
+import { getJellyfinUrl } from '../../Outils/jellyfinIds';
 import './surah.scss';
 
 
@@ -68,7 +69,7 @@ const Surah = () => {
           numberOfAyahs: arabic.numberOfAyahs,
           ayahs: mergedAyahs,
           // Audio sourate complète via Jellyfin
-          localAudio: `https://popcorn.solarusweb.ovh/jellyfin/Streaming/Audio/${String(id).padStart(3, '0')}.mp3`,
+          localAudio: getJellyfinUrl(parseInt(id)),
         });
         setLoading(false);
       } catch (error) {
