@@ -67,8 +67,8 @@ const Surah = () => {
           revelationType: arabic.revelationType,
           numberOfAyahs: arabic.numberOfAyahs,
           ayahs: mergedAyahs,
-          // Audio sourate complète local
-          localAudio: `${process.env.PUBLIC_URL}/sound/${String(id).padStart(3, '0')}.mp3`,
+          // Audio sourate complète via Jellyfin
+          localAudio: `https://popcorn.solarusweb.ovh/jellyfin/Streaming/Audio/${String(id).padStart(3, '0')}.mp3`,
         });
         setLoading(false);
       } catch (error) {
