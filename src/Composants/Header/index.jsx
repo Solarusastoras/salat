@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Moon, BookOpen, Clock, GraduationCap } from 'lucide-react';
+import { BookOpen, Clock, GraduationCap } from 'lucide-react';
 import './header.scss';
 import Logo from '../Logo'
 
