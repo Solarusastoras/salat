@@ -2,14 +2,15 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Moon, BookOpen, Clock, GraduationCap } from 'lucide-react';
 import './header.scss';
+import Logo from '../Logo'
 
 const Header = () => {
   return (
     <header className="header glass-panel">
       <div className="header__container">
         <Link to="/" className="header__logo">
-          <Moon className="header__logo-icon" size={28} />
-          <span>Noor</span>
+          <Logo />
+          <span>Salat</span>
         </Link>
 
         <nav className="header__nav">
