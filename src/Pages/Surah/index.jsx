@@ -38,6 +38,7 @@ const Surah = () => {
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeAyah, setActiveAyah] = useState(null);
+  const [selectedReciter, setSelectedReciter] = useState('ghamdi');
   const audioRef = useRef(new Audio());
 
   useEffect(() => {
@@ -104,9 +105,9 @@ const Surah = () => {
   };
 
   // Lecture sourate complète (fichier local Saad Al Ghamdi ou Yasser Al Dossari)
-  const toggleFullSurah = (reciter) => {
-    const audioSrc = reciter === 'yasser' ? surahData.localAudioYasser : surahData.localAudio;
-    const activeId = reciter === 'yasser' ? 'full-yasser' : 'full-ghamdi';
+  const toggleFullSurah = () => {
+    const audioSrc = selectedReciter === 'yasser' ? surahData.localAudioYasser : surahData.localAudio;
+    const activeId = selectedReciter === 'yasser' ? 'full-yasser' : 'full-ghamdi';
 
     if (isPlaying && activeAyah === activeId) {
       audioRef.current.pause();
@@ -117,6 +118,18 @@ const Surah = () => {
       audioRef.current.play();
       setActiveAyah(activeId);
       setIsPlaying(true);
+    }
+  };
+
+  const handleReciterChange = (e) => {
+    const newReciter = e.target.value;
+    setSelectedReciter(newReciter);
+    
+    // Stop current audio if it's playing full surah
+    if (isPlaying && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+      setActiveAyah(null);
     }
   };
 
@@ -147,19 +160,20 @@ const Surah = () => {
           <p>{surahData.numberOfAyahs} versets</p>
         </div>
         <div className="surah-header__arabic">{surahData.arabicName}</div>
-        <div className="surah-header__controls" style={{ display: 'flex', gap: '10px', marginTop: '15px' }}>
-          <button className={`surah-header__play-full ${activeAyah === 'full-ghamdi' && isPlaying ? 'playing' : ''}`}
-            onClick={() => toggleFullSurah('ghamdi')}>
-            {activeAyah === 'full-ghamdi' && isPlaying
+        <div className="surah-header__controls">
+          <select 
+            className="surah-header__select" 
+            value={selectedReciter} 
+            onChange={handleReciterChange}
+          >
+            <option value="ghamdi">Saad Al Ghamdi</option>
+            <option value="yasser">Yasser Al Dossari</option>
+          </select>
+          <button className={`surah-header__play-full ${(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying ? 'playing' : ''}`}
+            onClick={toggleFullSurah}>
+            {(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying
               ? <><Pause size={18} /> Pause</>
-              : <><Play size={18} /> Saad Al Ghamdi</>
-            }
-          </button>
-          <button className={`surah-header__play-full ${activeAyah === 'full-yasser' && isPlaying ? 'playing' : ''}`}
-            onClick={() => toggleFullSurah('yasser')}>
-            {activeAyah === 'full-yasser' && isPlaying
-              ? <><Pause size={18} /> Pause</>
-              : <><Play size={18} /> Yasser Al Dossari</>
+              : <><Play size={18} /> Écouter</>
             }
           </button>
         </div>
