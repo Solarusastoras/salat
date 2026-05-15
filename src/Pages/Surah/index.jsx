@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, Play, Pause } from 'lucide-react';
-import { getJellyfinUrl } from '../../Outils/jellyfinIds';
+import { getJellyfinUrl, getYasserJellyfinUrl } from '../../Outils/jellyfinIds';
 import './surah.scss';
 
 
@@ -70,6 +70,7 @@ const Surah = () => {
           ayahs: mergedAyahs,
           // Audio sourate complète via Jellyfin
           localAudio: getJellyfinUrl(parseInt(id)),
+          localAudioYasser: getYasserJellyfinUrl(parseInt(id)),
         });
         setLoading(false);
       } catch (error) {
@@ -102,16 +103,19 @@ const Surah = () => {
     }
   };
 
-  // Lecture sourate complète (fichier local Saad Al Ghamdi)
-  const toggleFullSurah = () => {
-    if (isPlaying && activeAyah === 'full') {
+  // Lecture sourate complète (fichier local Saad Al Ghamdi ou Yasser Al Dossari)
+  const toggleFullSurah = (reciter) => {
+    const audioSrc = reciter === 'yasser' ? surahData.localAudioYasser : surahData.localAudio;
+    const activeId = reciter === 'yasser' ? 'full-yasser' : 'full-ghamdi';
+
+    if (isPlaying && activeAyah === activeId) {
       audioRef.current.pause();
       setIsPlaying(false);
       setActiveAyah(null);
     } else {
-      audioRef.current.src = surahData.localAudio;
+      audioRef.current.src = audioSrc;
       audioRef.current.play();
-      setActiveAyah('full');
+      setActiveAyah(activeId);
       setIsPlaying(true);
     }
   };
@@ -143,14 +147,22 @@ const Surah = () => {
           <p>{surahData.numberOfAyahs} versets</p>
         </div>
         <div className="surah-header__arabic">{surahData.arabicName}</div>
-        {/* Bouton lecture sourate complète Saad Al Ghamdi */}
-        <button className={`surah-header__play-full ${activeAyah === 'full' && isPlaying ? 'playing' : ''}`}
-          onClick={toggleFullSurah}>
-          {activeAyah === 'full' && isPlaying
-            ? <><Pause size={18} /> Pause</>
-            : <><Play size={18} /> Écouter · Saad Al Ghamdi</>
-          }
-        </button>
+        <div className="surah-header__controls" style={{ display: 'flex', gap: '10px', marginTop: '15px' }}>
+          <button className={`surah-header__play-full ${activeAyah === 'full-ghamdi' && isPlaying ? 'playing' : ''}`}
+            onClick={() => toggleFullSurah('ghamdi')}>
+            {activeAyah === 'full-ghamdi' && isPlaying
+              ? <><Pause size={18} /> Pause</>
+              : <><Play size={18} /> Saad Al Ghamdi</>
+            }
+          </button>
+          <button className={`surah-header__play-full ${activeAyah === 'full-yasser' && isPlaying ? 'playing' : ''}`}
+            onClick={() => toggleFullSurah('yasser')}>
+            {activeAyah === 'full-yasser' && isPlaying
+              ? <><Pause size={18} /> Pause</>
+              : <><Play size={18} /> Yasser Al Dossari</>
+            }
+          </button>
+        </div>
       </div>
 
       <div className="ayahs-list">
