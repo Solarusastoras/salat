@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { BookOpen, Clock, GraduationCap } from 'lucide-react';
 import './header.scss';
 import Logo from '../Logo'
+import LogoTitle from '../LogoTitle'
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       <div className="header__container">
         <Link to="/" className="header__logo">
           <Logo />
-          <span>Soleïlarus</span>
+          <LogoTitle />
         </Link>
 
         <nav className="header__nav">

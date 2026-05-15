@@ -1,0 +1,31 @@
+.logo-title {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 200px;
+        /* Taille pour bureau */
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .logo-title {
+        img {
+            height: 60px;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .logo-title {
+        img {
+            height: 100px;
+            margin-top: 15px;
+            /* Pour s'aligner avec l'icône du logo sur mobile */
+        }
+    }
+}
