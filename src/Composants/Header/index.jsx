@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header__container">
         <Link to="/" className="header__logo">
           <Logo />
-          <span>Leîsolar</span>
+          <span>Soleîlarus</span>
         </Link>
 
         <nav className="header__nav">
