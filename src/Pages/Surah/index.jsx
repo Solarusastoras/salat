@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { ArrowLeft, Play, Pause } from 'lucide-react';
+import { ArrowLeft, Play, Pause, Loader } from 'lucide-react';
 import { getJellyfinUrl, getYasserJellyfinUrl } from '../../Outils/jellyfinIds';
 import './surah.scss';
 
@@ -32,14 +32,15 @@ const NOMS_FR = [
   'Le Secours', 'Les Fibres', 'La Pureté', 'L\'Aube Naissante', 'Les Hommes',
 ];
 
-const AyahCard = React.memo(({ ayah, isThisAyahPlaying, onTogglePlay }) => (
+const AyahCard = React.memo(({ ayah, isThisAyahPlaying, isBuffering, onTogglePlay }) => (
   <div className={`ayah-card glass-panel ${isThisAyahPlaying ? 'active' : ''}`}>
     <div className="ayah-card__header">
       <span className="ayah-card__number">{ayah.numberInSurah}</span>
       <button
         className={`ayah-card__play ${isThisAyahPlaying ? 'playing' : ''}`}
-        onClick={() => onTogglePlay(ayah)}>
-        {isThisAyahPlaying ? <Pause size={18} /> : <Play size={18} />}
+        onClick={() => onTogglePlay(ayah)}
+        disabled={isBuffering}>
+        {isBuffering ? <Loader size={18} className="spin" /> : (isThisAyahPlaying ? <Pause size={18} /> : <Play size={18} />)}
       </button>
     </div>
     <div className="ayah-card__content">
@@ -57,6 +58,7 @@ const Surah = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeAyah, setActiveAyah] = useState(null);
   const [selectedReciter, setSelectedReciter] = useState('ghamdi');
+  const [isAudioBuffering, setIsAudioBuffering] = useState(false);
   const audioRef = useRef(new Audio());
   const stateRef = useRef({ activeAyah: null, isPlaying: false });
 
@@ -159,9 +161,31 @@ const Surah = () => {
 
   useEffect(() => {
     const audio = audioRef.current;
-    const handleEnded = () => { setIsPlaying(false); setActiveAyah(null); };
+    const handleWaiting = () => setIsAudioBuffering(true);
+    const handlePlaying = () => setIsAudioBuffering(false);
+    const handleCanPlay = () => setIsAudioBuffering(false);
+    const handleEnded = () => { setIsPlaying(false); setActiveAyah(null); setIsAudioBuffering(false); };
+    const handleError = (e) => { 
+      console.error('Audio load error', audio.src, audio.error); 
+      setIsAudioBuffering(false); 
+      setIsPlaying(false);
+    };
+
+    audio.addEventListener('waiting', handleWaiting);
+    audio.addEventListener('loadstart', handleWaiting);
+    audio.addEventListener('playing', handlePlaying);
+    audio.addEventListener('canplay', handleCanPlay);
     audio.addEventListener('ended', handleEnded);
-    return () => { audio.removeEventListener('ended', handleEnded); };
+    audio.addEventListener('error', handleError);
+
+    return () => { 
+      audio.removeEventListener('waiting', handleWaiting);
+      audio.removeEventListener('loadstart', handleWaiting);
+      audio.removeEventListener('playing', handlePlaying);
+      audio.removeEventListener('canplay', handleCanPlay);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('error', handleError);
+    };
   }, []);
 
   if (loading) {
@@ -194,8 +218,11 @@ const Surah = () => {
             <option value="yasser">Yasser Al Dossari</option>
           </select>
           <button className={`surah-header__play-full ${(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying ? 'playing' : ''}`}
-            onClick={toggleFullSurah}>
-            {(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying
+            onClick={toggleFullSurah}
+            disabled={isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')}>
+            {isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')
+              ? <><Loader size={18} className="spin" /> Chargement...</>
+              : (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying
               ? <><Pause size={18} /> Pause</>
               : <><Play size={18} /> Écouter</>
             }
@@ -209,6 +236,7 @@ const Surah = () => {
             key={ayah.numberInSurah}
             ayah={ayah}
             isThisAyahPlaying={activeAyah === ayah.numberInSurah && isPlaying}
+            isBuffering={activeAyah === ayah.numberInSurah && isAudioBuffering}
             onTogglePlay={togglePlay}
           />
         ))}

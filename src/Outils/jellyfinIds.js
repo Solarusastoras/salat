@@ -123,7 +123,7 @@ export const getJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437a56c2d
     console.warn("No Jellyfin ID for Surah " + surahNumber);
     return null;
   }
-  return "https://popcorn.solarusweb.ovh/Items/" + itemId + "/Download?api_key=" + apiKey;
+  return "https://popcorn.solarusweb.ovh/Audio/" + itemId + "/stream?api_key=" + apiKey + "&static=true";
 };
 
 export const YASSER_JELLYFIN_ITEM_IDS = {
@@ -249,5 +249,5 @@ export const getYasserJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437
     console.warn("No Jellyfin ID for Surah " + surahNumber);
     return null;
   }
-  return "https://popcorn.solarusweb.ovh/Items/" + itemId + "/Download?api_key=" + apiKey;
+  return "https://popcorn.solarusweb.ovh/Audio/" + itemId + "/stream?api_key=" + apiKey + "&static=true";
 };
