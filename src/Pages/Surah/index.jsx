@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, Play, Pause } from 'lucide-react';
@@ -32,6 +32,24 @@ const NOMS_FR = [
   'Le Secours', 'Les Fibres', 'La Pureté', 'L\'Aube Naissante', 'Les Hommes',
 ];
 
+const AyahCard = React.memo(({ ayah, isThisAyahPlaying, onTogglePlay }) => (
+  <div className={`ayah-card glass-panel ${isThisAyahPlaying ? 'active' : ''}`}>
+    <div className="ayah-card__header">
+      <span className="ayah-card__number">{ayah.numberInSurah}</span>
+      <button
+        className={`ayah-card__play ${isThisAyahPlaying ? 'playing' : ''}`}
+        onClick={() => onTogglePlay(ayah)}>
+        {isThisAyahPlaying ? <Pause size={18} /> : <Play size={18} />}
+      </button>
+    </div>
+    <div className="ayah-card__content">
+      <p className="ayah-card__arabic">{ayah.arabicText}</p>
+      <p className="ayah-card__transliteration">{ayah.transliterationText}</p>
+      <p className="ayah-card__translation">{ayah.translationText}</p>
+    </div>
+  </div>
+));
+
 const Surah = () => {
   const { id } = useParams();
   const [surahData, setSurahData] = useState(null);
@@ -40,6 +58,11 @@ const Surah = () => {
   const [activeAyah, setActiveAyah] = useState(null);
   const [selectedReciter, setSelectedReciter] = useState('ghamdi');
   const audioRef = useRef(new Audio());
+  const stateRef = useRef({ activeAyah: null, isPlaying: false });
+
+  useEffect(() => {
+    stateRef.current = { activeAyah, isPlaying };
+  }, [activeAyah, isPlaying]);
 
   useEffect(() => {
     const fetchSurah = async () => {
@@ -92,8 +115,9 @@ const Surah = () => {
     };
   }, [id]);
 
-  const togglePlay = (ayah) => {
-    if (activeAyah === ayah.numberInSurah && isPlaying) {
+  const togglePlay = useCallback((ayah) => {
+    const { activeAyah: prevActive, isPlaying: prevPlaying } = stateRef.current;
+    if (prevActive === ayah.numberInSurah && prevPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
@@ -102,7 +126,7 @@ const Surah = () => {
       setActiveAyah(ayah.numberInSurah);
       setIsPlaying(true);
     }
-  };
+  }, []);
 
   // Lecture sourate complète (fichier local Saad Al Ghamdi ou Yasser Al Dossari)
   const toggleFullSurah = () => {
@@ -181,24 +205,12 @@ const Surah = () => {
 
       <div className="ayahs-list">
         {surahData.ayahs.map((ayah) => (
-          <div key={ayah.numberInSurah}
-            className={`ayah-card glass-panel ${activeAyah === ayah.numberInSurah ? 'active' : ''}`}>
-            <div className="ayah-card__header">
-              <span className="ayah-card__number">{ayah.numberInSurah}</span>
-              <button
-                className={`ayah-card__play ${activeAyah === ayah.numberInSurah && isPlaying ? 'playing' : ''}`}
-                onClick={() => togglePlay(ayah)}>
-                {activeAyah === ayah.numberInSurah && isPlaying
-                  ? <Pause size={18} />
-                  : <Play size={18} />}
-              </button>
-            </div>
-            <div className="ayah-card__content">
-              <p className="ayah-card__arabic">{ayah.arabicText}</p>
-              <p className="ayah-card__transliteration">{ayah.transliterationText}</p>
-              <p className="ayah-card__translation">{ayah.translationText}</p>
-            </div>
-          </div>
+          <AyahCard
+            key={ayah.numberInSurah}
+            ayah={ayah}
+            isThisAyahPlaying={activeAyah === ayah.numberInSurah && isPlaying}
+            onTogglePlay={togglePlay}
+          />
         ))}
       </div>
     </div>
