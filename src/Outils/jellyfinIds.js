@@ -1,120 +1,120 @@
 // Jellyfin Item IDs pour chaque sourate
-// Généré automatiquement le 2026-05-14T00:58:01.588Z
+// Généré automatiquement le 2026-05-28T22:17:30.736Z
 export const JELLYFIN_ITEM_IDS = {
-  1: "111abd3a7584c859b2c81db7ee199a4f",  // Al-Fatihah
-  2: "637e2a3447dc0f73c0e5ed0dbe34660c",  // Al-Baqarah
-  3: "1e008c26a314a2c99b51a98fd8027ef1",  // Al-Imran
-  4: "9dd4a6395722f5a4745c8360392901df",  // An-Nisa
-  5: "8d5925b35f98fc8b588fff6c688a66aa",  // Al-Ma'idah
-  6: "cd001552f6c030cef18aaf74df58c68c",  // Al-An'am
-  7: "d458446792f5f1fe5f14a591eb11c93f",  // Al-A'raf
-  8: "cf0648085316216cf0bf6581fd55cc98",  // Al-Anfal
-  9: "406e56281eb78deb1ada0a2f4b5430e1",  // At-Tawbah
-  10: "761f52cf71299add95e4c9cfdf31a50b",  // Yunus
-  11: "676a4332f9a3fac649f21e12d29a952e",  // Hud
-  12: "86fd787d2888735ef672379c09c50876",  // Yusuf
-  13: "36602072166680b43b3fb0001d70afbb",  // Ar-Ra'd
-  14: "adafbaa0521409b810f8e5bd932e33df",  // Ibrahim
-  15: "8deb3b1ef56b7b3afd3a3fc1a30b8b8c",  // Al-Hijr
-  16: "f133c9d45662b96b1446c5220de55748",  // An-Nahl
-  17: "d0c9ba808945ab6a6b9fd0d5231ffb43",  // Al-Isra
-  18: "741942526d82f46407c4d93f63ca6657",  // Al-Kahf
-  19: "6692ef14d2bf664362e4a1873e9f314a",  // Maryam
-  20: "a61398e75334f2b2b7da3fea7f05b33d",  // Ta-Ha
-  21: "f500a1876c8e1d46954f8d3d798397ad",  // Al-Anbiya
-  22: "8ac55ae9f2e8cffa82553cf9fc7addba",  // Al-Hajj
-  23: "369c050ec7013a5b4f46d9b3ef362eb8",  // Al-Mu'minun
-  24: "0860eeab3056cf4f0d26b12acb593c80",  // An-Nur
-  25: "84b1d53e4349f912f75045614e694e66",  // Al-Furqan
-  26: "54f8800ce216ecbc879145216303aca9",  // Ash-Shu'ara
-  27: "e1403b6f9a5d947b86a8cbf20324bf8c",  // An-Naml
-  28: "9801ab0359a68445c3ffce8cfc24479a",  // Al-Qasas
-  29: "643352286ae6a825739cbaf53fa0940d",  // Al-'Ankabut
-  30: "c092d5ddd70e76ef0ffec9bef99fdf5f",  // Ar-Rum
-  31: "e2c7710461f2847a112192f23fe1100c",  // Luqman
-  32: "ba1c203045a557bb08bdf4335d063847",  // As-Sajdah
-  33: "940eb470520d11ffa3b8a5c1063aa876",  // Al-Ahzab
-  34: "9bdb4fa0be2c985b67a3a49090636d2a",  // Saba
-  35: "6f0804aa01ae4d2a61b8b14896fb8747",  // Fatir
-  36: "7f5de5d0172f72d07eeb4e284927cfb1",  // Ya-Sin
-  37: "9f8fe4a182ec050e04154e98743b849f",  // As-Saffat
-  38: "05f2e5d16fb7f8a5a8278d3b640dd02a",  // Sad
-  39: "d0307af61f7c68b3f3390014cf92ea72",  // Az-Zumar
-  40: "0fe1ee38626198848d22b162e14ce653",  // Ghafir
-  41: "69b12083c6cf6c7be8bf4b2b15e22a51",  // Fussilat
-  42: "c37a556baea5976006f49f55770494b0",  // Ash-Shura
-  43: "13a2668c684fca101379c2b0612b013d",  // Az-Zukhruf
-  44: "ff7d4e756bc7d370a6f596e23da2148b",  // Ad-Dukhan
-  45: "2ea6d3ad045d51570966746b324df677",  // Al-Jathiya
-  46: "22c8ba8c30e66ab16ce66ba70abb20b1",  // Al-Ahqaf
-  47: "c25a1e9473f87228f2e26f35ff71b349",  // Muhammad
-  48: "2d3c460e9f2c7edb8d613954c7140854",  // Al-Fath
-  49: "9bdce904d3f277b931514bd534cc886d",  // Al-Hujurat
-  50: "e2404b7462c6d32f0327d56985750532",  // Qaf
-  51: "6c7fb3ef7d58485d1b66ffea094f8ec1",  // Az-Zariyat
-  52: "33c7ca8d2714374e353ee530c68278eb",  // At-Tur
-  53: "a8c7f6d0dc659e4dceddebb88523baa5",  // An-Najm
-  54: "19709361bb1450b30e3e7f745ae47b49",  // Al-Qamar
-  55: "bc2f592376ada5237fbc0199d2c331c8",  // Ar-Rahman
-  56: "bc021fea4bc7a3e3424af65031c57a19",  // Al-Waqi'ah
-  57: "1f5bd7127680a9bd0f17ac94dd0f39a8",  // Al-Hadid
-  58: "071e21e0d47cc9e86477a3f7b93eea80",  // Al-Mujadilah
-  59: "733f9d81b21aee0082f684ea70597b79",  // Al-Hashr
-  60: "145d3a25fe80f04f8cda752fd40001c7",  // Al-Mumtahinah
-  61: "6cb78a5f50479417ff8e9b5c6c9ce496",  // As-Saff
-  62: "1155d4ca23ee3a2bcccf1c4f5aeccd81",  // Al-Jumu'ah
-  63: "376b30ad6c21d0bb4ff36613c7c386cc",  // Al-Munafiqun
-  64: "66bb3a4f7f44a8c7c61b62d1000ac7bc",  // At-Taghabun
-  65: "77e957d1395eb3d0336a548c03d332f0",  // At-Talaq
-  66: "26da0bd433146ca263e7f43c69b3d674",  // At-Tahrim
-  67: "f867c78de921111a201d9f0c8e21e0c3",  // Al-Mulk
-  68: "c673723eaca9b9c04671aa5ee5808ae2",  // Al-Qalam
-  69: "668accb0be6c23ea978f8874cd4296b3",  // Al-Haqqah
-  70: "959d5014ea1f2cd870ea59364ad43803",  // Al-Ma'arij
-  71: "ce6c97e80357c5b3e9ec272aca7fc403",  // Nuh
-  72: "cc659c89215f6c0f4357895051bdb59b",  // Al-Jinn
-  73: "b87a2c8ae9004aa91b2d60fbd2cdc61a",  // Al-Muzzammil
-  74: "d6951a9c734749a3f8a5969dd2b8a50d",  // Al-Muddaththir
-  75: "6d3740664a59a98db61cec8204b4a60d",  // Al-Qiyamah
-  76: "5ba387fefcd0e64b2206977e98116be8",  // Al-Insan
-  77: "20345393017b8a60bf2663499c64a0da",  // Al-Mursalat
-  78: "6df22cf92b5316c2c2eb50f9f1e02db0",  // An-Naba
-  79: "adba08a5a950f1b9b05cc087bcc7779f",  // An-Nazi'at
-  80: "e98ff7aeb1f3b828935a8880ad022dc6",  // 'Abasa
-  81: "a2895dc20f5c73195838a2417e3b4f8a",  // At-Takwir
-  82: "a3212e774fdd360623eb8036d8866b5b",  // Al-Infitar
-  83: "75f76bd9f8b94d070628285eea11ae6d",  // Al-Mutaffifin
-  84: "b49fedd858af2533114edda34005670a",  // Al-Inshiqaq
-  85: "912902ecb58f3a175c2e73d9b009047b",  // Al-Buruj
-  86: "c07bae7c410b0ae238484da99893e10e",  // At-Tariq
-  87: "a0c4c30fed445f7b3938fc0552768a4e",  // Al-A'la
-  88: "dccb695f4e5cdb86fd84a1757278fd56",  // Al-Ghashiyah
-  89: "fe09389458528ce98f05d15f2a30b63b",  // Al-Fajr
-  90: "f7fd8a602589ec5838519f51dacbac3c",  // Al-Balad
-  91: "a5852007588918f58840e9cfaf90fad5",  // Ash-Shams
-  92: "4858155f1927f5d8611f278918dc5887",  // Al-Lail
-  93: "056cc9fe8247243635451d06754aa6fd",  // Ad-Duha
-  94: "f90a1fc36ae19aa51178427728f152c0",  // Ash-Sharh
-  95: "d7d9909c6d9c68d130597c8715d21db1",  // At-Tin
-  96: "bb7a1994b75cd73120996edaae638342",  // Al-'Alaq
-  97: "6bc5b4cf9bc4b27bd0f1e5215e8f8a9e",  // Al-Qadr
-  98: "a17c75c71cdf946c622780c4956893c8",  // Al-Baiyinah
-  99: "22c1ce3d7b886739df3327f8c7c319c8",  // Az-Zalzalah
-  100: "91cfcdc4c55fe6124fb1c151941a7d68",  // Al-Adiyat
-  101: "1f0eb2da145730c5b17313c7154ac3cc",  // Al-Qari'ah
-  102: "5aa2e2a1009b65845ffb51690a3118ce",  // At-Takathur
-  103: "4efc7fda667142cb97f2b6ff34aba7e3",  // Al-'Asr
-  104: "c0ecd4da22b32a39bb427b80d6e8ed3c",  // Al-Humazah
-  105: "ba1559995c107bcda83bb7d347ecaa7e",  // Al-Fil
-  106: "87c5959aa958c7d3dae9a920209ea0a7",  // Quraysh
-  107: "50c61658caf03d47934deaf97770f9a9",  // Al-Ma'un
-  108: "75bb3e3b0b8edb1ceaf1b7260158e880",  // Al-Kauthar
-  109: "15c5ddaaca9633c9c59e37016be14104",  // Al-Kafirun
-  110: "3170c069bf66d4fe795495f3b20a5653",  // An-Nasr
-  111: "d60632446b8ee8257ef781b534df0f51",  // Al-Masad
-  112: "f5edc0362b865fc19d7454bf14ac8164",  // Al-Ikhlas
-  113: "207d4445801322454f944d44fccde95d",  // Al-Falaq
-  114: "d14b3a5ec94a728778beb2219ab5bd8d",  // An-Nas
+  1: "6c8000f80208aede87c3c9c90cb273da",  // Al-Fatihah
+  2: "e5d22b18e45fd27dcfb5e3a5e4541e1d",  // Al-Baqarah
+  3: "e2ae540b9107889e3087ce1368c077cd",  // Al-Imran
+  4: "1dafedc536b57d9cf10e6dc5c8896b8a",  // An-Nisa
+  5: "20961486e48cccd1e8dbebd189ee6db6",  // Al-Ma'idah
+  6: "2fc66ea37ffef780c4f05f356220faf6",  // Al-An'am
+  7: "180cbcd27b7d0a6f1d97f3b08cc65895",  // Al-A'raf
+  8: "2cbe15dc893807ec4fd60825007d1873",  // Al-Anfal
+  9: "f78d012a782cbf6ed6f93af3afe00c47",  // At-Tawbah
+  10: "27df9ce887d964781329f70188c0305f",  // Yunus
+  11: "1fa85bd1803ce3c5c7c05d52583072b0",  // Hud
+  12: "2fb2ea1daecbc8e6a6c0acd2c0dfec99",  // Yusuf
+  13: "f01cd6b9359e40a1cebebfba3349ed38",  // Ar-Ra'd
+  14: "150ed3d422298cb8f9f625a98d019426",  // Ibrahim
+  15: "02d7476717ddb5ab2013802151f8e4f3",  // Al-Hijr
+  16: "0cabbdc174cc3b0574cb1cbff1971512",  // An-Nahl
+  17: "4cebf030b0c3daa31cef3d049bf96996",  // Al-Isra
+  18: "5bd1bf41514b20e1aec5de4ea8ca75e5",  // Al-Kahf
+  19: "fe2c5da30fafd78dfd0ae8a6af4cb5ba",  // Maryam
+  20: "a2d129af72ba42427906fb1c1617b718",  // Ta-Ha
+  21: "f34559907f6dd1e7b148a0c5f32f3558",  // Al-Anbiya
+  22: "a7a10defe00f59146e46a061552caffe",  // Al-Hajj
+  23: "5180ef1ef6df735d9dc4934dfa73ec3a",  // Al-Mu'minun
+  24: "2402cbb04a2e4dc929851fea43c0e804",  // An-Nur
+  25: "91cb9587063e13069a7ce38dc3796c37",  // Al-Furqan
+  26: "a4e7a49aeaa2a7f23a90e8d295675887",  // Ash-Shu'ara
+  27: "03d216bc8721d2f46c070d47803e2b31",  // An-Naml
+  28: "71d4a2c597f5d9306da070bbc20a236e",  // Al-Qasas
+  29: "36d2e28a0ac74cd3d2d7ec57a142757d",  // Al-'Ankabut
+  30: "5ef29e0bd99ee0b0c7c1ef6c16af0972",  // Ar-Rum
+  31: "7aea441f0978c89c59f1103070148d4e",  // Luqman
+  32: "ee264bcf76c21493cb43dd643681f568",  // As-Sajdah
+  33: "9b54388017cd834339947540e5a25d65",  // Al-Ahzab
+  34: "ab112bec48c191a7182a2a3aa9e62036",  // Saba
+  35: "850c9a66ab49a0f2445e0784b2a8c142",  // Fatir
+  36: "79550f8c0ebc31397089581c536365e3",  // Ya-Sin
+  37: "a332db003fad91656efd449efbfefc9c",  // As-Saffat
+  38: "9b867613a94ea5135dc9e681be7fc081",  // Sad
+  39: "26e9c43e028631f608fc4b2a1e0889a1",  // Az-Zumar
+  40: "7876bcce7b5e26bbd4e43282266ecaea",  // Ghafir
+  41: "871236dc2336da7f3d33a3d4dd6b1885",  // Fussilat
+  42: "37481f705ace7cedf83e3c07c4b21c4e",  // Ash-Shura
+  43: "1a80f9c5d25bb8c5a75cee9e785c998b",  // Az-Zukhruf
+  44: "a2ca4701a2cec49522ad8765718a71eb",  // Ad-Dukhan
+  45: "b8a092373f1fd137724d522ed9d15608",  // Al-Jathiya
+  46: "fbdcc198c77b5c4aab3e5f207693c437",  // Al-Ahqaf
+  47: "1448c7cf19ac2f83bf532d8b0285af40",  // Muhammad
+  48: "47065f14d2f0e2538ff40d664dfb7421",  // Al-Fath
+  49: "af6cb021c532bd2269fbf2b982ee08cb",  // Al-Hujurat
+  50: "3f8b11463bd20db7b65581f9ca7d2bd6",  // Qaf
+  51: "eadc4a01dea69a66bbae8518d1103708",  // Az-Zariyat
+  52: "c6ea8c2f9da30f9547fcd5410bd75585",  // At-Tur
+  53: "d47172233f154d6ca1ee2fca6233527d",  // An-Najm
+  54: "7f9fe15fe44b367ad502bfff1f66dd3f",  // Al-Qamar
+  55: "f77d597a2379b43bccd3f7584ce720cf",  // Ar-Rahman
+  56: "6592af8835669e94e9cfb94ceaa00167",  // Al-Waqi'ah
+  57: "544f29644cd933e50a06c37ad286ce42",  // Al-Hadid
+  58: "335476c465122f2216deb61163765fa2",  // Al-Mujadilah
+  59: "ed9099552d999814ba6f9fdebc17e3df",  // Al-Hashr
+  60: "14188ab7776b75b2ac98f4cfbc588d15",  // Al-Mumtahinah
+  61: "95d649bfc08438cfa36a95a045e18c15",  // As-Saff
+  62: "9a6fcd54c043ea22716ed287c3cd2595",  // Al-Jumu'ah
+  63: "a5a91c1414f07080677c00c5c7ee3fe6",  // Al-Munafiqun
+  64: "e8c2ca2a4483d10a4aac1dcc8019ce93",  // At-Taghabun
+  65: "32f9786c0497210622745078db9919a5",  // At-Talaq
+  66: "8c36072c874fb476ce588868e6117f17",  // At-Tahrim
+  67: "dca0406c8744680fc1993e8338065947",  // Al-Mulk
+  68: "6eaac4bd8a4ee0fc23fae8f7909480ea",  // Al-Qalam
+  69: "8c5492f09760132f7eda6a2ff2edfc93",  // Al-Haqqah
+  70: "21bc4b5448bab4e7812167da766e1f0f",  // Al-Ma'arij
+  71: "808fe7c6e1dc4c8bb039b3a45175b0f8",  // Nuh
+  72: "834ec461eacaf86f7641d4ee6e4a50be",  // Al-Jinn
+  73: "f29004d476d544e66cef3f4ec8738e6a",  // Al-Muzzammil
+  74: "c06ae5b2c62fa1380753c2fb82889e10",  // Al-Muddaththir
+  75: "c09e573948bcc6ab066c76b326610011",  // Al-Qiyamah
+  76: "451961f4e95ea142a224e3aeff8d1cb4",  // Al-Insan
+  77: "9ebe1c61d24260087bb442d158a677d6",  // Al-Mursalat
+  78: "5acb58e5afa1fbb95c87c5bcb995ed54",  // An-Naba
+  79: "864bfaa5aeb97e4d72a72ee2dfca1bae",  // An-Nazi'at
+  80: "8c92fda2dbee4360846e2e18a2e90874",  // 'Abasa
+  81: "32a15b3cf1f10145004d9dd5c1240f0e",  // At-Takwir
+  82: "4e0a80afdd59169bae490ad0dfb1bed8",  // Al-Infitar
+  83: "fa35d0629b8f7a6108b2daa67bfc616e",  // Al-Mutaffifin
+  84: "5a2d931c029fa43601eecac4d1ea7d4f",  // Al-Inshiqaq
+  85: "72cafd33f86adbaafe225bbce7c39695",  // Al-Buruj
+  86: "705d9910d32d5643de00c1140eb1b6b9",  // At-Tariq
+  87: "5f90ea998ae775cfd8d22479c8405f98",  // Al-A'la
+  88: "6a2480af755cc81f9bf6a22cd8b0340d",  // Al-Ghashiyah
+  89: "36f52432704b634a8e39f9f09161e252",  // Al-Fajr
+  90: "d593065ec2297df8bedc39ac52eb2157",  // Al-Balad
+  91: "4a767e4367c6d11d5186adbea732f2fd",  // Ash-Shams
+  92: "6530d23ff059d8904d7e7a0877b3651c",  // Al-Lail
+  93: "f27ef6e57aae2433289c52ad2b188af2",  // Ad-Duha
+  94: "a5c88490d7dff7dceccffe46b404d7cf",  // Ash-Sharh
+  95: "0cee9d444e69aa73d947461b76d2ce3d",  // At-Tin
+  96: "5c1e62ba63f7e804c6b43845585cc1f7",  // Al-'Alaq
+  97: "950686f71f36b4df911e895d831a90fb",  // Al-Qadr
+  98: "c0f68d1960195691f19ccde7aa17aa49",  // Al-Baiyinah
+  99: "2976ebb982b25565a4d88a944b013713",  // Az-Zalzalah
+  100: "64b7e273bd453eff68cfa41e9bffc62e",  // Al-Adiyat
+  101: "fda832637338c5eecc568a008e2bfcd7",  // Al-Qari'ah
+  102: "1ca15066ef8c0b99f59128f74156e2d8",  // At-Takathur
+  103: "88ff5350f5196224b7d686afdce576b1",  // Al-'Asr
+  104: "584c46b52b610991ffcf7e3c697ca9fa",  // Al-Humazah
+  105: "97cc9556b71510ad9f6c178dd0a52c59",  // Al-Fil
+  106: "2be49259a70f81c9613ba965c3f38c44",  // Quraysh
+  107: "6a8d7c71dd3b35176c342877c3608f47",  // Al-Ma'un
+  108: "57cd9859eeb1a13dbcfd3eead99f6b1b",  // Al-Kauthar
+  109: "2767f9d0f3689f8efabbe25b0bd2cd05",  // Al-Kafirun
+  110: "5796ee15712ff5635c3184355c4ffb8c",  // An-Nasr
+  111: "bfdde03eb8872b03b76eb271104ff711",  // Al-Masad
+  112: "0e94b176bce1f91dcb34693909b6913c",  // Al-Ikhlas
+  113: "b2fdeead7cf7a1283b7af021b51cc619",  // Al-Falaq
+  114: "9238d797d1aa4abdcb56e7d29963902a",  // An-Nas
 };
 
 export const getJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437a56c2d54d00f") => {
@@ -127,120 +127,120 @@ export const getJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437a56c2d
 };
 
 export const YASSER_JELLYFIN_ITEM_IDS = {
-  1: "e8269b9aea5ce7d085c0ea6d9562f63c", // 001 - Al-Fatihah
-  2: "6bc55fab1bc88292f7579446b0743f64", // 002 - Al-Baqara
-  3: "0895e56776516977956c3d5966553340", // 003 - Al-Imran
-  4: "7e63411e54cf4fdc53192782ddbc1cc0", // 004 - An-Nisa'
-  5: "3f769b769c7b725c869a611f9b1871eb", // 005 - Al-Ma'idah
-  6: "350237a32ee991ca57c8f18590ec0586", // 006 - Al-An'am
-  7: "c869875680d449c71036c9608846a835", // 007 - Al-A'raf
-  8: "64d48b9ca74dfe4ae00af92567b2ace1", // 008 - Al-Anfal
-  9: "89cd274ec7501cf58e309b4a39f7d990", // 009 - At-Taubah
-  10: "45314e510a797833eb027cb9764dfc94", // 010 - Yunus
-  11: "0e3aaa71c88d3e8f9f8df10f90a41bef", // 011 - Hood
-  12: "3f100ad8d694c1b0d2823a23c112ad61", // 012 - Yusuf
-  13: "e4dabc3b4ca5dde67fe2bb5d5c9179ea", // 013 - Ar-Ra'd
-  14: "6dfeb9d4f554b87a0bbf31a0866f8d49", // 014 - Ibrahim
-  15: "820dd96a4534aa4ee26c3510688eb483", // 015 - Al-Hijr
-  16: "88846020ff29262370f5d04db64aafeb", // 016 - An-Nahl
-  17: "541fdded4c2ba10cc124a9b96fad1b57", // 017 - Al-Isra
-  18: "c9165fdcd0a4f40361af9b823265db81", // 018 - Al-Kahf
-  19: "8b80300ca0b696794f1c9a8b1abd270e", // 019 - Maryam
-  20: "506275cbea47577f52a182cd8805c997", // 020-taha
-  21: "1a728f1af9b9f8669f019a2977fe86da", // 021 - Al-Anbiya'
-  22: "28e211e8f8f2774fa61c2921a55ebb3c", // 022 - Al-Hajj
-  23: "f8746820251392503ac846803328f4e4", // 023 - Al-Mu'minun
-  24: "68fcf2d76920432fcbd8377105bb2c0e", // 024-an-noor
-  25: "b667fbd5604699a3bdf9802a4a807cdc", // 025-al-furqan
-  26: "8864fc130b306ad1783a5eca76da46ea", // 026 - Ash-Shu'ara'
-  27: "0cca1c0aa3f8368cad9be8e7c95a40dd", // 027 - An-Naml
-  28: "5b85979288097331cc15760d0837621b", // 028 - Al-Qasas
-  29: "b5a144bebe37c5a96f41d8a13ca133ae", // 029 - Al-'ankabut
-  30: "d7c310562735c40340550b8a3c922588", // 030 - Arroom
-  31: "4c1a049bb255e05b39c6b8b44150c6f0", // 031 - Luqman
-  32: "c551a7befeb7e8c0e72a288fa75cab68", // 032 - As­sajdah
-  33: "2f7f709507444a0cf8863e1a2b7ef64f", // 033 - Al­ahzab
-  34: "c3687f10f7b5c7bdeabe54e1046b93f5", // 034 - Saba'
-  35: "b7e5d1ccbba65cbc6182469b486caa32", // 035 - Fatir
-  36: "7a09a7e37f5129685edcebe7bc2423fd", // 036 - Ya­sin
-  37: "8881e672e85db7eec471c5d2723a94f7", // 037 - As-Saffat
-  38: "f898f833f78aec302bb8bcae319d8e51", // 038 - Sad
-  39: "c54030e8800eab89047a4af33f896e35", // 039 - Az-Zumar
-  40: "88c75bb88b3650f315eccb945c06a35e", // 040 - Ghafir
-  41: "9ee195b0b89c26447d6946bc6a504930", // 041 - Fussilat
-  42: "897983d965039a639eb3b21f35d552c5", // 042 - Ash-Shura
-  43: "6de04da99ea182f88f80c3d3bba715fb", // 043 - Az-Zukhruf
-  44: "fea6bda703e2c618f40da4541c35d60f", // 044 - Ad-Dukhan
-  45: "7a2c80b714db8df576ed3a4981c2390b", // 045 - Al-Jathiya
-  46: "7d933f87ee9ea2872d9e61b01a87d1fa", // 046 - Al-Ahqaf
-  47: "0f0d0942f0e6cb7fc0c96d5500ee4085", // 047 - Muhammad
-  48: "e1d49e93c41c75d90d41557f0193c299", // 048 - Al-Fath
-  49: "ebc63bbf75f19a53e02d031ebd0791b4", // 049 - Al-Hujurat
-  50: "9a5f8c661f24bdc9cb10035d629d5569", // 050 - Qaf
-  51: "8169f596efba73189fbc0f3b9e7d62b8", // 051 - Az-Zariyat
-  52: "8b4b2fbf70f7c2d68398a1177ec0eed3", // 052 - At-Tur
-  53: "ca38d16c9028c47701f79dabfb12ee7c", // 053 - An-Najm
-  54: "ec61e3ecd9ba4536b730adafa3ec6dce", // 054 - Al-Qamar
-  55: "4c03824cf6b0dec6d92c4a5b713b0cf8", // 055 - Ar-Rahman
-  56: "042cab5939c3f2826fc4a51c4c83e9ee", // 056 - Al-Waqi'ah
-  57: "232249071695bfaa90c4ca81bba8e1b0", // 057 - Al-Hadid
-  58: "5e2976aa67105cf9c429f19481dbac05", // 058 - Al-Mujadilah
-  59: "052f2be7120666179c2bc9d41540c70e", // 059 - Al-Hashr
-  60: "a7eda6745c2f6d791096ac5431723373", // 060 - Al-Mumtahinah
-  61: "4dd69ba69aaa138f32dd9d3396b0a2f4", // 061 - As-Saff
-  62: "d0229fe6079ccdba8d474a1d01a0c70f", // 062 - Al-Jumu'ah
-  63: "d8f63b15d790eb25698a23b3f65a473e", // 063 - Al-Munafiqun
-  64: "f14e835b7cc7207bbbc8105649436162", // 064 - At-Taghabun
-  65: "5f9dd6d1e24c7dcbe3a49fe009ec38e3", // 065 - At-Talaq
-  66: "73ccbdeb6c9f5304cd85b7b3c110d0bf", // 066 - At-Tahrim
-  67: "e35010840abf4aa2a9917e644d5717ff", // 067 - Al-Mulk
-  68: "637b1a4feb30eec55618de5230912b9c", // 068 - Al-Qalam
-  69: "66dffa9f7ae172321e357c6ba3005598", // 069 - Al-Haqqah
-  70: "97699a5ba24d55bac536fc1017a8892b", // 070 - Al-Ma'arij
-  71: "146092a1fd31a51dfb7c25500b21d4b4", // 071 - Nooh
-  72: "0ca0b967bb8550406120f6c2dfe254f1", // 072 - Al-Jinn
-  73: "b80873186f90821b0fc76ee5e102284d", // 073 - Al-Muzzammil
-  74: "9e4eee02cddfb55e10fce449c4b392df", // 074 - Al-Muddaththir
-  75: "19722bcf9511e8ff4574ed0f425b2f80", // 075 - Al-Qiyamah
-  76: "d81d1831543f8c013f223f9ce9dc5b42", // 076 - Al-Insan
-  77: "eb905b4137d515c39d17c54e9e4ef3b7", // 077 - Al-Mursalat
-  78: "35b3e084fee71b342c2e015a3c2818e5", // 078 - An-Naba'
-  79: "f2c204bdc56c8f1580e4f2264908765b", // 079 - An-Nazi'at
-  80: "77964703009c3b2d46ea418acba3b2e7", // 080 - 'abasa
-  81: "6fe28c17ede867118496ad16b446267c", // 081 - At-Takwir
-  82: "104de7475eea3cfee618b2f238032793", // 082 - Al-Infitar
-  83: "fef163032c5a00053f4c3ebe78305797", // 083 - Al-Mutaffifin
-  84: "ffeb1c179158a5476ef9c2c9863ea7c4", // 084 - Al-Inshiqaq
-  85: "f584ea2fafb48bbf3c85f8da15699d61", // 085 - Al-Buruj
-  86: "833fe4add8b6b91c56a088a3b145b264", // 086 - At-Tariq
-  87: "92edfbc2c3dd466a330bf16cedb23b61", // 087 - Al-A'la
-  88: "4333ab1fc070121e8c8bd6a2d7723ff1", // 088 - Al-Ghashiyah
-  89: "bd6a03174a0b95757b3802c6a7fd4b48", // 089 - Al-Fajr
-  90: "65d75b43134689f662eda0215eb705ba", // 090 - Al-Balad
-  91: "7789cfbc642fa5c2448ad6ffbb2aaeb3", // 091 - Ash-Shams
-  92: "b311ac5fb6e64f53b3bd8b0d4a5d8240", // 092 - Al-Lail
-  93: "043f34b3a440ac87b7bbdd1edee7eb69", // 093 - Ad-Duha
-  94: "906407e1da1eeb31873f921bd7eceeb0", // 094 - Ash-Sharh
-  95: "484fc8cf5869e4b01092922a96a08cf0", // 095 - At-Tin
-  96: "4be0839025a1bdd32e94f0762677b425", // 096 - Al-'alaq
-  97: "4402f4cf4394f3e77fd2e96b7a36307f", // 097 - Al-Qadr
-  98: "b40e1e5e43e033445a9a13063d19c478", // 098 - Al-Baiyinah
-  99: "0396e785f19a5e420bc3dcf8abb22436", // 099 - Az-Zalzalah
-  100: "38b79bdf3e0b55d171328708a2f022b3", // 100 - Al-'adiyat
-  101: "d3e5b6313b403e8393753a7755bb7972", // 101 - Al-Qari'ah
-  102: "cf9c25cedecd887190a9b4a5653966d0", // 102 - At-Takathur
-  103: "f6695817df0054524ac4907a17964cbd", // 103 - Al-'asr
-  104: "44fc1be75ff752ad480388cb4a2e1037", // 104 - Al-Humazah
-  105: "d118134514b11435ef550665a9711dd4", // 105 - Al-Fil
-  106: "ee925e9673891a508b92c48dcba7c518", // 106 - Quraish
-  107: "edb1c8c75500d0109db9af64511270e8", // 107 - Al-Ma'un
-  108: "685fcadfcecf41ca68cabd01c380dff1", // 108 - Al-Kauthar
-  109: "1688f2c03f6ecc958f59ab43a87d4890", // 109 - Al-Kafirun
-  110: "2caa728285f709fc8c4f7c1cc8b46073", // 110 - An-Nasr
-  111: "5d0f7b749d1b29e7650bdb9da75cdec6", // 111 - Al-Masad
-  112: "3d03837535c5f70073a6ede1406fac4f", // 112 - Al-Ikhlas
-  113: "5c25fbb79852b39391bc7fa1eaa2d305", // 113 - Al-Falaq
-  114: "72a044590e9df3721f06376eb5fab82c", // 114 - An-Nas
+  1: "11e854dbb7f2adbb11409f7ad143d5de", // 001-al-fatiha-4920-9396
+  2: "40b5a55a48dbfa6af2af6bee0fed8638", // 002-al-baqara-4921-808
+  3: "a9a435c7399331f889e80e2b1d56ba80", // 003-aal-e-imran-4922-1073
+  4: "7d4b42a65a40492828b131e029f94877", // 004-an-nisa-4923-3724
+  5: "90ba303ef5ca4b3080fef0ffcd76035b", // 005-al-maeda-4924-6127
+  6: "bb98e982290748657813e72878fe9742", // 006-al-anaam-4925-8467
+  7: "093e6880154d346228a89a81254b5980", // 007-al-araf-4926-1914
+  8: "5409859b6903e801d5f98479af2edd3c", // 008-al-anfal-4927-846
+  9: "405b46d37e0ee1a62b4b04b3771a5166", // 009-at-taubah-4928-8630
+  10: "d6bbfc8d84523c2de01f7b81ef610c14", // 010-yunus-4929-5172
+  11: "1b0f63c67c2289cff4446c86a02d228a", // 011-hud-4930-8194
+  12: "a19a1e80dbe396e4985f7f27298b1134", // 012-yusuf-4931-7911
+  13: "9d6af7fd1fd784e76baf5d3b56b2734a", // 013-ar-rad-4932-2614
+  14: "970f8a824d64a02748211dd37d876179", // 014-ibrahim-4933-4470
+  15: "0b7fe03017fc3617883bb0912f16513f", // 015-al-hijr-4934-7054
+  16: "6679d9ce81c950ac11352ed68c021683", // 016-an-nahl-4935-1309
+  17: "6cc7dbf3b530d4158d472c7834927e4d", // 017-al-isra-4936-4910
+  18: "9d56b2a2fdd346e8d7d33a64ae5004f6", // 018-al-kahf-4937-7953
+  19: "365b55b39cb0436701609cb133169cfb", // 019-maryam-4938-8213
+  20: "d167a5cfb1628f1dbf3e20cb564c2edc", // 020-taha-4939-9881
+  21: "304d004ec4aa7f3b4a88e061c2935713", // 021-al-anbiya-4940-2967
+  22: "439d9bbf21710750a459cfa4ca9b5d31", // 022-al-hajj-4941-709
+  23: "07c03d6d2ad006fdd0f07fd1fe36f24f", // 023-al-mumenoon-4942-2818
+  24: "11a114200122ecc1a5b8c4b78eb37c65", // 024-an-noor-5694-8549
+  25: "df0a3b916f072554c11d559c046eaddc", // 025-al-furqan-5714-9638
+  26: "34cee2cd715b8605922f73153b055f66", // 026-ash-shuara-4943-786
+  27: "26724b6bc676519e034c29a2a104b789", // 027-an-naml-4944-6688
+  28: "231e25408516b2c9987924e6e0eeb456", // 028-al-qasas-4945-1071
+  29: "1d401f6800a38a2d53415ebfb00e989a", // 029-al-ankaboot-4946-1320
+  30: "7892293be7c60f4ac0f81f5b14ef4828", // 030-ar-room-4947-8025
+  31: "d6b6437026d4c2fe3ead7ecd3c04aeb1", // 031-luqman-4948-3073
+  32: "ac8365b910653f1e2e63bb1d3674f075", // 032-as-sajda-4949-9158
+  33: "d81967a8895082ed33942be4614dcb46", // 033-al-ahzab-4950-4051
+  34: "48adbaad015db2bf9280ac81960ffd65", // 034-saba-4951-2468
+  35: "fc3f04ef75399e9afb8d29158dcc31d5", // 035-fatir-4952-9966
+  36: "acf419ff7cd44141863696aec24d8c0f", // 036-ya-seen-4953-5124
+  37: "b719750c0b7d60623a6dd9042c024646", // 037-as-saaffat-4954-6193
+  38: "8ae413904d1f8af6284c470e1cee8e3a", // 038-sad-4955-6092
+  39: "9d9a0f18ab61c1daf9a20da3b7f7180a", // 039-az-zumar-4956-3591
+  40: "d258371ad4c5f7326caabd6da01165c5", // 040-ghafir-4957-8108
+  41: "c87cc79fa7b1798f666af79bd421ce4f", // 041-fussilat-4958-6938
+  42: "711100883f7c20d01adb464bf5876c4f", // 042-ash-shura-4959-2221
+  43: "a26d4faed9df39a8b6181f890fc64ab0", // 043-az-zukhruf-4960-3279
+  44: "8c53c60d2a384de5e6696a18f057edd4", // 044-ad-dukhan-4961-5132
+  45: "7451af808e536953d09f3af482f85ce5", // 045-al-jathiya-4962-131
+  46: "be843d43a82202e4ad4d3762be961f00", // 046-al-ahqaf-4963-5894
+  47: "43624e53cbcd302ff8a06c6fa6d1887c", // 047-muhammad-4964-9603
+  48: "348491f056533d138dd6bd1853611fd6", // 048-al-fath-4965-7185
+  49: "31069b26c91aa6e4ec4471f22386f396", // 049-al-hujraat-4966-7203
+  50: "cdf8c903ad124c1d930cd55d3c110d9a", // 050-qaf-4967-4512
+  51: "54c91af61135b79ada4b114d4c285910", // 051-adh-dhariyat-4968-5137
+  52: "19eecf049c8823cde64ac0a7744045cf", // 052-at-tur-4969-5416
+  53: "962fd44b790dafb3b88e32037174bb66", // 053-an-najm-4970-4393
+  54: "a42188c1494b00a04581792bd183e358", // 054-al-qamar-4971-8104
+  55: "f3eb1fd489534898c5ebff1c071e26e0", // 055-al-rahman-4972-6125
+  56: "21b02c4327cc89f154303471a0ba8e4a", // 056-al-waqia-4973-7211
+  57: "6766c5fb7560937ea06c453975ad2937", // 057-al-hadid-4974-8891
+  58: "5393a6107a234b6e502c90dafd0f5c52", // 058-al-mujadala-4975-2812
+  59: "8f54004bc137288454682319b9292bdf", // 059-al-hashr-4976-8283
+  60: "2190765d738e84b532622d62a86d2588", // 060-al-mumtahina-4977-210
+  61: "4bb5286cc875099d90ba72249d300f98", // 061-as-saff-4978-837
+  62: "bd7188239f7de15959048b516942a036", // 062-al-jumua-4979-1355
+  63: "129f757818933d17f701eade5f5d736d", // 063-al-munafiqoon-4980-9369
+  64: "a8ec346fe76d98cfb6a356b39de37a21", // 064-at-taghabun-4981-4888
+  65: "2b2f07a38b862c1c56b98010e4772464", // 065-at-talaq-4982-3823
+  66: "152332bd73f8ae28e004ec70c00a2445", // 066-at-tahrim-4983-9334
+  67: "3f48c9d8ec6adfdcb092b725cd9374c8", // 067-al-mulk-4984-12
+  68: "2e1a167d1de93a1930cf215355aded9a", // 068-al-qalam-4985-15
+  69: "717e981eb3d7646d6cad30d1ef56bc7f", // 069-al-haaqqa-4986-5425
+  70: "e3e5743736d70e45e6774ab7f73be256", // 070-al-maarij-4987-3603
+  71: "b5d5a0f3b9d362fdf51988ac90f7ab02", // 071-nooh-4988-8123
+  72: "f56f33ae47a95b6a4f036bf19ad959f1", // 072-al-jinn-4989-2363
+  73: "970d1959ef0026f7f3156c21e03b5bd6", // 073-al-muzzammil-4990-5824
+  74: "9ba1e092e2aa88db39e7465edc1abd12", // 074-al-muddathir-4991-1402
+  75: "d99b274e77b1e267cf4a781ab6cf7f76", // 075-al-qiyama-4992-7495
+  76: "55db720073e04a1b31dd5a40331ea052", // 076-al-insan-4993-5956
+  77: "8fa8383bdedcade03a01ecb89c72e4cc", // 077-al-mursalat-4994-7296
+  78: "9f4faf5fe22939137c802e13d55b84d0", // 078-an-naba-4995-7098
+  79: "71d5ef83d914cbef8f63339a6cdd2738", // 079-an-naziat-4996-3140
+  80: "9574d49f5c0c5cd61b2515b56d03cb87", // 080-abasa-4997-4499
+  81: "b354beead7bc72afe8a5502f9751ada4", // 081-at-takwir-4998-1609
+  82: "ba8c927dccbd8be9d4c4410484745931", // 082-al-infitar-4999-8278
+  83: "ac1f06bd412274a1917da3738c4dbf62", // 083-al-mutaffifin-5000-9915
+  84: "0bc6c17e2e3faf606245dcf32cae1c9c", // 084-al-inshiqaq-5001-6002
+  85: "be2dc29d8c7a2c8a3977704810fd9711", // 085-al-burooj-5002-6382
+  86: "06962925ee0db25713a1a95e0c84b088", // 086 - At-Tariq
+  87: "bfcfc2c71691923268e065c169c801ca", // 087-al-ala-5004-3213
+  88: "e363bd35f12981e4e20b826165d8f6f8", // 088-al-ghashiya-5005-5273
+  89: "2a03bac4016180d9a430d8b1e8efb006", // 089-al-fajr-5006-8852
+  90: "9a9a34d32998e8aded0065a5b87c7ad6", // 090-al-balad-5007-1495
+  91: "d8ba871fed714e40231012f0ea86e1a3", // 091-ash-shams-5008-5483
+  92: "435116e9ba517afd9b8a80ffc1e43953", // 092-al-lail-5009-9690
+  93: "de82ddc3c2a248da08b7b0d3b4baa6f9", // 093-ad-dhuha-5010-2850
+  94: "71d19e9c169e77b6394bac9c1679e975", // 094-ash-sharh-5011-4851
+  95: "8f63bd32e5fbe3ab0b77976a65a18406", // 095-at-tin-5012-4577
+  96: "fc4e171800a560f9a8db1359d86ac46e", // 096-al-alaq-5013-6673
+  97: "65d4acc2552c277b56b12a130e99139a", // 097-al-qadr-5014-4185
+  98: "8807abaf46fc5ddafb8330267268be3d", // 098-al-bayyina-5015-4589
+  99: "c8fe9f770987706fd34decdae1143d71", // 099-al-zalzala-5016-6689
+  100: "a1a5fe47a21ace2f8155c1f16b8f0b5e", // 100-al-adiyat-5017-9611
+  101: "ce3b405fd777eecf2b32a2ea0c63b6bc", // 101-al-qaria-5018-8193
+  102: "f5d35cdd8f14aa6d7b3892e505cb32e7", // 102-at-takathur-5019-4812
+  103: "8ead1aa26038cc503225ec41d09f8b4c", // 103-al-asr-5020-1973
+  104: "c820b13027303b87a091cb6f674c9e9b", // 104-al-humaza-5021-4017
+  105: "35ee192d77c33972734458e59956f4ac", // 105-al-fil-5022-6215
+  106: "199e0fb454d6c1db2226228a1495fd76", // 106-quraish-5023-9469
+  107: "cdbecbeda333ce37278e741650481c7e", // 107-al-maun-5024-9973
+  108: "ed9db831ace878a6f77c674fa85ca68f", // 108-al-kauther-5025-3510
+  109: "902a8d83bb5bb3572d1fc6a70eda66df", // 109-al-kafiroon-5026-6566
+  110: "15862659428386bea5f396908cc0b2b9", // 110-an-nasr-5027-3113
+  111: "3e6419f1e6ef235e3535d01165f9a76b", // 111-al-masadd-5028-8010
+  112: "2713bf9548717e23fac0aa4b22d48d96", // 112-al-ikhlas-5029-8175
+  113: "b866743a0136f31a8a6facb1e535fa96", // 113-al-falaq-5030-1390
+  114: "bef49834177e43535a3d30655cdaa28b", // 114-an-nas-5031-7924
 };
 
 export const getYasserJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437a56c2d54d00f") => {
