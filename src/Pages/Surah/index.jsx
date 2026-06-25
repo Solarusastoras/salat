@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, Play, Pause, Loader } from 'lucide-react';
-import { getJellyfinUrl, getYasserJellyfinUrl } from '../../Outils/jellyfinIds';
+import { getJellyfinUrl, getYasserJellyfinUrl, getBasetJellyfinUrl } from '../../Outils/jellyfinIds';
 import './surah.scss';
 
 
@@ -97,6 +97,7 @@ const Surah = () => {
           // Audio sourate complète via Jellyfin
           localAudio: getJellyfinUrl(parseInt(id)),
           localAudioYasser: getYasserJellyfinUrl(parseInt(id)),
+          localAudioBaset: getBasetJellyfinUrl(parseInt(id)),
         });
         setLoading(false);
       } catch (error) {
@@ -130,10 +131,18 @@ const Surah = () => {
     }
   }, []);
 
-  // Lecture sourate complète (fichier local Saad Al Ghamdi ou Yasser Al Dossari)
+  // Lecture sourate complète (fichier local Saad Al Ghamdi, Yasser Al Dossari, ou AbdulBaset)
   const toggleFullSurah = () => {
-    const audioSrc = selectedReciter === 'yasser' ? surahData.localAudioYasser : surahData.localAudio;
-    const activeId = selectedReciter === 'yasser' ? 'full-yasser' : 'full-ghamdi';
+    let audioSrc = surahData.localAudio;
+    let activeId = 'full-ghamdi';
+    
+    if (selectedReciter === 'yasser') {
+      audioSrc = surahData.localAudioYasser;
+      activeId = 'full-yasser';
+    } else if (selectedReciter === 'baset') {
+      audioSrc = surahData.localAudioBaset;
+      activeId = 'full-baset';
+    }
 
     if (isPlaying && activeAyah === activeId) {
       audioRef.current.pause();
@@ -152,7 +161,7 @@ const Surah = () => {
     setSelectedReciter(newReciter);
     
     // Stop current audio if it's playing full surah
-    if (isPlaying && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')) {
+    if (isPlaying && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser' || activeAyah === 'full-baset')) {
       audioRef.current.pause();
       setIsPlaying(false);
       setActiveAyah(null);
@@ -216,13 +225,14 @@ const Surah = () => {
           >
             <option value="ghamdi">Saad Al Ghamdi</option>
             <option value="yasser">Yasser Al Dossari</option>
+            <option value="baset">AbdulBaset AbdulSamad</option>
           </select>
-          <button className={`surah-header__play-full ${(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying ? 'playing' : ''}`}
+          <button className={`surah-header__play-full ${(activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser' || activeAyah === 'full-baset') && isPlaying ? 'playing' : ''}`}
             onClick={toggleFullSurah}
-            disabled={isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')}>
-            {isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser')
+            disabled={isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser' || activeAyah === 'full-baset')}>
+            {isAudioBuffering && (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser' || activeAyah === 'full-baset')
               ? <><Loader size={18} className="spin" /> Chargement...</>
-              : (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser') && isPlaying
+              : (activeAyah === 'full-ghamdi' || activeAyah === 'full-yasser' || activeAyah === 'full-baset') && isPlaying
               ? <><Pause size={18} /> Pause</>
               : <><Play size={18} /> Écouter</>
             }

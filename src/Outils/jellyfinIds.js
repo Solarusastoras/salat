@@ -251,3 +251,17 @@ export const getYasserJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437
   }
   return "https://popcorn.solarusweb.ovh/Audio/" + itemId + "/stream?api_key=" + apiKey + "&static=true";
 };
+
+export const BASET_JELLYFIN_ITEM_IDS = {
+  // TODO: Ajoutez les IDs générés par Jellyfin pour AbdulBaset AbdulSamad ici
+  // Exemple: 1: "id_jellyfin_pour_fatiha",
+};
+
+export const getBasetJellyfinUrl = (surahNumber, apiKey = "211b9a996a2c415ea437a56c2d54d00f") => {
+  const itemId = BASET_JELLYFIN_ITEM_IDS[surahNumber];
+  if (!itemId) {
+    console.warn("No Jellyfin ID for Surah " + surahNumber + " (AbdulBaset)");
+    return null;
+  }
+  return "https://popcorn.solarusweb.ovh/Audio/" + itemId + "/stream?api_key=" + apiKey + "&static=true";
+};
