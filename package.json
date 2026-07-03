@@ -1,6 +1,7 @@
 {
   "name": "salat",
   "version": "0.1.0",
+  "homepage": "https://salat.solarusweb.ovh",
   "private": true,
   "dependencies": {
     "axios": "^1.16.0",
