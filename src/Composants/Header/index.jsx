@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { BookOpen, Clock, GraduationCap } from 'lucide-react';
 import './header.scss';
 import Logo from '../Logo'
-import LogoTitle from '../LogoTitle'
 
 const Header = () => {
   return (
