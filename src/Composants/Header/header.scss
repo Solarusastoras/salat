@@ -81,36 +81,22 @@
     border-left: none;
     border-right: none;
     border-top: none;
-    padding: 1rem;
+    padding: 0.75rem 1rem; /* slightly less padding */
 
     &__container {
-      flex-direction: column;
-      gap: 1rem;
+      flex-direction: row; /* Keep it horizontal to save space */
+      justify-content: center; /* Center the logo if we want, or space-between if there are other elements */
     }
 
     &__logo {
-      flex-direction: column; /* Empile l'image et le texte du logo sur mobile */
-      gap: 0;
+      /* Keep horizontal orientation to save vertical space */
+      flex-direction: row; 
+      gap: 0.5rem;
     }
 
     &__nav {
-      width: 100%;
-      
-      &-list {
-        justify-content: space-evenly; /* Répartit les icônes de navigation équitablement */
-        gap: 0.5rem;
-        width: 100%;
-      }
-    }
-
-    &__nav-link {
-      padding: 0.6rem;
-      flex: 1;
-      justify-content: center;
-
-      span {
-        display: none;
-      }
+      /* Hide navigation in header on mobile, as it will be in the bottom footer */
+      display: none;
     }
   }
 }

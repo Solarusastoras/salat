@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Composants/Header';
+import Footer from './Composants/Footer';
 import Salat from './Pages/Salat';
 import Coran from './Pages/Coran';
 import Surah from './Pages/Surah';
@@ -20,7 +21,7 @@ function App() {
           <Route path="/apprendre" element={<Apprendre />} />
         </Routes>
       </main>
-      {/* Footer can go here */}
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,67 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--bg-primary, rgba(15, 23, 42, 0.9));
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-item {
+    flex: 1;
+  }
+
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    color: var(--text-secondary, #94a3b8);
+    text-decoration: none;
+    transition: all var(--transition-normal, 0.3s ease);
+    border-radius: 12px;
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: var(--text-primary, #f8fafc);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &.active {
+      color: var(--accent-color, #00d287);
+      
+      svg {
+        color: var(--accent-color, #00d287);
+        transform: translateY(-2px);
+      }
+    }
+
+    svg {
+      transition: all var(--transition-fast, 0.3s ease);
+    }
+  }
+}
+
+/* Hide the footer on desktop as navigation remains in the header */
+@media (min-width: 769px) {
+  .footer {
+    display: none;
+  }
+}

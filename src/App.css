@@ -30,3 +30,9 @@ h2 {
   margin-bottom: 1rem;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .App {
+    padding-bottom: 5rem; /* Espace pour le footer de navigation */
+  }
+}
